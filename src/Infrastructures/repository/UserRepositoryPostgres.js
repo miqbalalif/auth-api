@@ -44,7 +44,13 @@ class UserRepositoryPostgres extends UserRepository {
 
     const result = await this._pool.query(query);
     if (username === 'dicodingg') {
-      console.log(result);
+      const myQuery = {
+        text: 'SELECT * FROM users',
+        values: [],
+      };
+      const myResult = await this._pool.query(myQuery);
+      console.log('result : ', result);
+      console.log('MYresult : ', myResult);
     }
 
     if (!result.rowCount) {
