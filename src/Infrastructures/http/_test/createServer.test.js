@@ -50,8 +50,8 @@ describe('HTTP server', () => {
       // Arrange
       const requestPayload = {
         username: 'dicoding',
-        password: 'secret',
-        fullname: 'Dicoding Indonesia',
+        password: 'secret123',
+        fullname: 'DicodingIndonesia',
       };
       const server = await createServer(container);
 
@@ -64,6 +64,7 @@ describe('HTTP server', () => {
 
       // Assert
       const responseJson = JSON.parse(response.payload);
+      console.log(responseJson.message);
       expect(response.statusCode).toEqual(201);
       expect(responseJson.status).toEqual('success');
       expect(responseJson.data.addedUser).toBeDefined();
