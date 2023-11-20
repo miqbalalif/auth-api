@@ -89,12 +89,12 @@ describe('UserRepositoryPostgres', () => {
       // Arrange
       const userRepositoryPostgres = new UserRepositoryPostgres(pool, {});
       await UsersTableTestHelper.addUser({
-        username: 'dicoding',
+        username: 'dicodingg',
         password: 'secret_password',
       });
 
       // Action & Assert
-      const password = await userRepositoryPostgres.getPasswordByUsername('dicoding');
+      const password = await userRepositoryPostgres.getPasswordByUsername('dicodingg');
       expect(password).toBe('secret_password');
     });
   });
