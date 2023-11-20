@@ -92,9 +92,11 @@ describe('UserRepositoryPostgres', () => {
         username: 'dicodingbaruu',
         password: 'secret_password',
       });
+      console.log(await UsersTableTestHelper.findUsersById('user-123'));
 
       // Action & Assert
       const password = await userRepositoryPostgres.getPasswordByUsername('dicodingbaruu');
+      console.log('password : ', password);
       expect(password).toBe('secret_password');
     });
   });
