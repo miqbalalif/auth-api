@@ -49,7 +49,7 @@ describe('HTTP server', () => {
     it('should response 201 and persisted user', async () => {
       // Arrange
       const requestPayload = {
-        username: 'dicoding',
+        username: 'dicodingbaruuu',
         password: 'secret123',
         fullname: 'DicodingIndonesia',
       };
