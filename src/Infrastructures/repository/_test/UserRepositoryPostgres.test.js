@@ -96,7 +96,6 @@ describe('UserRepositoryPostgres', () => {
 
       // Action & Assert
       const password = await userRepositoryPostgres.getPasswordByUsername('dicodingbaruu');
-      console.log('password : ', password);
       expect(password).toBe('secret_password');
     });
   });
